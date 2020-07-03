@@ -71,6 +71,8 @@ const functionality = async () => {
     propretiesFind.push(await found);
   }
 
+  await browser.close();
+
   const transporter = nodemailer.createTransport({
     pool: true,
     host: process.env.MAIL_HOST,
@@ -89,8 +91,6 @@ const functionality = async () => {
     text: getText(propreties, propretiesFind),
     html: getHtml(propreties, propretiesFind),
   });
-
-  await browser.close();
 };
 
 /**
