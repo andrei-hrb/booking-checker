@@ -126,8 +126,13 @@ const getHtml = (propreties, propretiesFind) => {
 
   output += `<br />Acesta este încă un soft netestat extensiv, așa că pot exista probleme cu acuratețea informațiilor; Recomand, cel puțin pâna la dispariția acestui paragraf, verificarea acestor informații pe Booking.com apasând <a href="${searchLink}">acest link</a>, iar orice problemă trebuie comunicată. Mulțumesc anticipat!`;
 
+  output += "<br /><br /><hr />";
+
   output +=
-    '<br /><br /><small>Creat cu multă ❤️ și ☕ de către <a href="https://andrei-hrb.com/" rel="noopener noreferrer" target="_blank">Hîrbu Andrei</a></small>.';
+    "<br /><small>Nu răspundeți acestui email/trimiteți email-uri pe acestă adresă, nu vă va răspunde nimeni.</small>.";
+
+  output +=
+    '<br /><small>Creat cu multă ❤️ și ☕ de către <a href="https://andrei-hrb.com/" rel="noopener noreferrer" target="_blank">Hîrbu Andrei</a></small>.';
 
   return output;
 };
