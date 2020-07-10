@@ -141,7 +141,11 @@ const app = express();
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
-  functionality().then(() => res.send("Done!"));
+  if (req.query.key === process.env.KEY) {
+    functionality().then(() => res.send("Done!"));
+  } else {
+    res.send("Invalid key!");
+  }
 });
 
 app.listen(port, () => console.log(`App listening at port ${port}`));
